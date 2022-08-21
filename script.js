@@ -7,7 +7,7 @@ textarea.focus()
 textarea.addEventListener('keyup', (e) => {
     createTags(e.target.value)
 
-    if(e.key === 'Entetr') {
+    if(e.key === 'Enter') {
         setTimeout(() => {
             e.target.value = ''
         }, 10)
@@ -25,8 +25,8 @@ function createTags(input) {
 
     tags.forEach(tag => {
         const tagEl = document.createElement('span')
-        tagsEl.classList.add('tag')
-        tagsEl.innerText = tag
+        tagEl.classList.add('tag')
+        tagEl.innerText = tag
         tagsEl.appendChild(tagEl)
     })
 
